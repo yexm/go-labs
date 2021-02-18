@@ -2,13 +2,17 @@
 
 实验结果：
 
-    dada-imac:misc dada$ go test -test.bench="." labs04
-    testing: warning: no tests to run
+    go test -bench=. -benchmem
+    goos: darwin
+    goarch: amd64
+    pkg: go-labs/labs04
+    Benchmark_Loop1-8        1785180               779 ns/op               0 B/op          0 allocs/op
+    Benchmark_Loop2-8        1715780               731 ns/op               0 B/op          0 allocs/op
+    Benchmark_Loop3-8        1422454               837 ns/op               0 B/op          0 allocs/op
+    Benchmark_Loop4-8          93202             12047 ns/op               0 B/op          0 allocs/op
+    Benchmark_Loop5-8          97647             11893 ns/op               0 B/op          0 allocs/op
     PASS
-    Benchmark_Loop1     2000000         923 ns/op
-    Benchmark_Loop2     2000000         819 ns/op
-    Benchmark_Loop3     2000000         825 ns/op
-    Benchmark_Loop4     100000        26230 ns/op
-    ok  	labs04	10.640s
+    ok      go-labs/labs04  9.221s
+
 
 结论：对结构体列表的range循环最消耗性能，因为数据要重复复制。

@@ -33,6 +33,37 @@ type BigStruct struct {
 	C28 uint64
 	C29 uint64
 	C30 uint64
+
+	C101 uint64
+	C102 uint64
+	C103 uint64
+	C104 uint64
+	C105 uint64
+	C106 uint64
+	C107 uint64
+	C108 uint64
+	C109 uint64
+	C110 uint64
+	C111 uint64
+	C112 uint64
+	C113 uint64
+	C114 uint64
+	C115 uint64
+	C116 uint64
+	C117 uint64
+	C118 uint64
+	C119 uint64
+	C120 uint64
+	C121 uint64
+	C122 uint64
+	C123 uint64
+	C124 uint64
+	C125 uint64
+	C126 uint64
+	C127 uint64
+	C128 uint64
+	C129 uint64
+	C130 uint64
 }
 
 func Invoke1(a *BigStruct) uint64 {

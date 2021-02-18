@@ -2,26 +2,19 @@
 
 实验结果：
 
-    dada-imac:labs dada$ go test -test.bench="." labs07
+    go test -bench=. -benchmem    
+    goos: darwin
+    goarch: amd64
+    pkg: go-labs/labs07
+    Benchmark_Loop1-8         311688              3902 ns/op               0 B/op          0 allocs/op
+    Benchmark_Loop2-8         258488              4646 ns/op               0 B/op          0 allocs/op
+    Benchmark_Loop3-8          62006             16604 ns/op               0 B/op          0 allocs/op
+    Benchmark_Loop4-8          15566             82921 ns/op          256256 B/op       1001 allocs/op
+    Benchmark_Loop5-8           3760            310976 ns/op           16016 B/op       2002 allocs/op
+    Benchmark_Loop6-8         270974              4343 ns/op             256 B/op          1 allocs/op
+    Benchmark_Loop7-8         244359              4833 ns/op             600 B/op          7 allocs/op
     PASS
-    Benchmark_Loop1    500000          4386 ns/op
-    Benchmark_Loop2    500000          5206 ns/op
-    Benchmark_Loop3    100000         14821 ns/op
-    Benchmark_Loop4     10000        135384 ns/op
-    Benchmark_Loop5      5000        607735 ns/op
-    Benchmark_Loop6    500000          7067 ns/op
-    ok      labs07  14.618s    
+    ok      go-labs/labs07  9.544s
 
-确认算法有效：
-
-    dada-imac:labs dada$ go test labs07 -v
-    === RUN Test_Loop4
-    --- PASS: Test_Loop4 (0.00 seconds)
-    === RUN Test_Loop5
-    --- PASS: Test_Loop5 (0.00 seconds)
-    === RUN Test_Loop6
-    --- PASS: Test_Loop6 (0.00 seconds)
-    PASS
-    ok      labs07  0.016s
 
 结论：有空做个查询表达式解析器吧。

@@ -74,7 +74,16 @@ func Loop4(a []BigStruct) int {
 
 	return n
 }
+func Loop5(a []BigStruct) int {
+	var n = 0
 
+	for idx, item := range a {
+		n += item.C30
+		_ = idx
+	}
+
+	return n
+}
 func Benchmark_Loop1(b *testing.B) {
 	b.StopTimer()
 	var a = make([]*BigStruct, 1000)
@@ -118,5 +127,14 @@ func Benchmark_Loop4(b *testing.B) {
 
 	for i := 0; i < b.N; i++ {
 		Loop4(a)
+	}
+}
+func Benchmark_Loop5(b *testing.B) {
+	b.StopTimer()
+	var a = make([]BigStruct, 1000)
+	b.StartTimer()
+
+	for i := 0; i < b.N; i++ {
+		Loop5(a)
 	}
 }
